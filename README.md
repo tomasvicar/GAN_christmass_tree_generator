@@ -1,6 +1,10 @@
 # GAN_christmass_tree_generator
 
 
+[Google Colab link](https://colab.research.google.com/drive/101mA97Hfx15FZJLsNwTq7F4WRpE546OL?usp=sharing)
+
+
+
 ## real
 ![img](example_img/real0000000.png)
 
