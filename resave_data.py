@@ -6,10 +6,10 @@ import cv2
 import numpy as np
 
 data_path = '../data_orig'
-save_path = '../data'
+save_path = '../data_64'
 
 
-img_size = 128
+img_size = 64
 
 try:
     os.mkdir(save_path)

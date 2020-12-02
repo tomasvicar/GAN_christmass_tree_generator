@@ -3,6 +3,8 @@ import os
 from skimage.io import imread
 import torch
 import numpy as np
+import matplotlib.pyplot as plt
+import torchvision.utils as vutils
 
 class DataLoader(torch.utils.data.Dataset):
     def __init__(self,path):
@@ -26,3 +28,22 @@ class DataLoader(torch.utils.data.Dataset):
         
     
         return img
+    
+    
+    
+    
+    
+    
+if __name__ == "__main__": 
+    loader = DataLoader('../data_64')
+    loader = torch.utils.data.DataLoader(loader, batch_size=128,shuffle=True, num_workers=0,drop_last=True)
+    
+    for i,data in enumerate(loader):
+        
+        plt.figure(figsize=(15,15))
+        plt.imshow(np.transpose(vutils.make_grid(data.cpu().detach()[:32],padding=2, normalize=True).numpy(),(1,2,0)))
+        plt.show()
+    
+        break
+        
+    
