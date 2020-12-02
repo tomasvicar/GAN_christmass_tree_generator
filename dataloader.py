@@ -8,7 +8,7 @@ class DataLoader(torch.utils.data.Dataset):
     def __init__(self,path):
         self.path=path
 
-        self.files_img=glob.glob(self.path + '/*.png')
+        self.files_img=glob.glob(self.path + '/*.png')*100
 
         self.num_of_imgs=len(self.files_img)
 
