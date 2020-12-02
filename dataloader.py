@@ -1,6 +1,6 @@
 import glob
 import os
-from skimage.io import imread
+from skimage.io import imread, imsave
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -41,9 +41,12 @@ if __name__ == "__main__":
     for i,data in enumerate(loader):
         
         plt.figure(figsize=(15,15))
-        plt.imshow(np.transpose(vutils.make_grid(data.cpu().detach()[:32],padding=2, normalize=True).numpy(),(1,2,0)))
+        img = np.transpose(vutils.make_grid(data.cpu().detach()[:32],padding=2, normalize=True).numpy(),(1,2,0))
+        plt.imshow(img)
         plt.show()
+        imsave('example_img/real' + str(i).zfill(7) + '.png',img)
     
-        break
+        if i ==3: 
+            break
         
     
