@@ -35,4 +35,4 @@ code is using [DCGAN](https://arxiv.org/pdf/1511.06434.pdf) and [Wasserstain GAN
 
 
 ## training gif
-![img](example_img/gan_res2.gif)
+<img src="example_img/gan_res2.gif" width="1000" height="800" />
